@@ -44,9 +44,9 @@ public class EstruturaControle {
          * em Java usa-se os caracteres ||
          */
         if((idade < 18) || (!temCNH)){ // !temCNH é uma condição de negação -> NOT temCNH
-            System.out.println("Permissão de condução de veículos concedida.");
+            System.out.println("Permissão negada.");
         }else{
-            System.out.println("Permissão negada");
+            System.out.println("Permissão de condução de veículos concedida.");
         }
 
 

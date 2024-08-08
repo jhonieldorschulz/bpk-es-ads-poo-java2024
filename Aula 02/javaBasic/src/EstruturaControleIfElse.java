@@ -13,6 +13,12 @@ public class EstruturaControleIfElse {
             System.out.println("Menor de idade");
         }
 
+        /**
+         * A partir do Java 8, se tornou possível trabalhar com if ternário
+         */
+       String resposta = (idade >= 18 ? "Maior de idade" : "Menor de idade");
+       System.out.println(resposta);
+
 
         /**
          * Verificando se o usuário  tem CNH

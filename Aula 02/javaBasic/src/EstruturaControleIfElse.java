@@ -1,7 +1,6 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class EstruturaControle {
+public class EstruturaControleIfElse {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -48,6 +47,8 @@ public class EstruturaControle {
         }else{
             System.out.println("Permissão de condução de veículos concedida.");
         }
+
+
 
 
     }

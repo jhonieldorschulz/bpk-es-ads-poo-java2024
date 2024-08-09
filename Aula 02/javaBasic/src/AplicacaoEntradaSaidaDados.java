@@ -10,26 +10,9 @@ public class AplicacaoEntradaSaidaDados {
      * @param args
      */
     public static void main(String[] args) {
-        /**
-         * Aqui, um objeto Scanner é criado para capturar a
-         * entrada do usuário a partir do console (System.in).
-         */
-        Scanner scanner = new Scanner(System.in);
 
-        /**
-         * System.out.print exibe a mensagem "Digite o seu nome:" no console, sem pular para
-         * a próxima linha.
-         * scanner.nextLine() lê a linha digitada pelo usuário e a armazena na variável nome.
-         */
-        System.out.print("Digite o seu nome: ");
-        String nome = scanner.nextLine();
-
-        /**
-         * System.out.print exibe a mensagem "Digite sua idade:" no console.
-         * scanner.nextInt() lê um número inteiro digitado pelo usuário e o armazena na variável idade.
-         */
-        System.out.print("Digite sua idade: ");
-        int idade = scanner.nextInt();
+        String nome = input("Digite o seu nome: ");
+        int idade = inputInt("Digite sua idade: ");
 
         /**
          * A variável userInfo é uma string formatada, usando uma sintaxe de bloco de texto (text block) do Java,
@@ -44,7 +27,34 @@ public class AplicacaoEntradaSaidaDados {
         System.out.println(userInfo);
 
 
-
-
     }
+
+
+    /**
+     *
+     * @param msgDialog
+     * @return
+     * Método extraído da refatoração para reaproveitamento no processamento de entrada de dados
+     * informados pelo usuário no terminal.
+     *
+     *
+     */
+    public static String input(String msgDialog){
+        Scanner scanner = new Scanner(System.in);
+        String strPrint = msgDialog.contains(":")? msgDialog: msgDialog + ":";
+        System.out.print(strPrint);
+        return scanner.nextLine();
+    }
+
+    /**
+     * Método para invocar o método input e retornar a informação digitada pelo usuário já
+     * convertida para String
+     * @param msgDialog
+     * @return
+     */
+    public static int inputInt(String msgDialog){
+        String strInput = input(msgDialog);
+        return Integer.parseInt(strInput);
+    }
+
 }

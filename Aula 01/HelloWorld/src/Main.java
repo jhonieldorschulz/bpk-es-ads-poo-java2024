@@ -1,14 +1,23 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+/**
+ * Define uma classe pública chamada AplicacaoEntradaSaidaDados.
+ * Esta é a estrutura principal do código.
+ */
 public class Main {
+
+    /**
+     * O método main é o ponto de entrada do programa.
+     * É o método que é executado quando o programa é iniciado.
+     * O parâmetro String[] args permite que argumentos sejam passados para o programa a partir da linha de comando,
+     * mas neste exemplo, não estamos utilizando esses argumentos.
+     * @param args
+     */
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!");
 
         for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
     }

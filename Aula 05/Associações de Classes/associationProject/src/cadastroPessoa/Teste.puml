@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Conta {
+    -String numero
+    -double saldo
+    +Conta(String numero, double saldoInicial)
+    +String getNumero()
+    +double getSaldo()
+    +void debitar(double valor)
+    +void creditar(double valor)
+}
+
+class TransacaoService {
+    +void processarTransacao(Conta contaOrigem, Conta contaDestino, double valor)
+    -void validarConta(Conta conta)
+    -void verificarSaldo(Conta conta, double valor)
+    -void realizarTransferencia(Conta contaOrigem, Conta contaDestino, double valor)
+    -void registrarTransacao(Conta contaOrigem, Conta contaDestino, double valor)
+}
+
+Conta "1" *-- "1..*" TransacaoService : usa
+
+class Main {
+    +void main(String[] args)
+}
+
+Main --> Conta : cria
+Main --> TransacaoService : usa
+
+
+
+
+@enduml

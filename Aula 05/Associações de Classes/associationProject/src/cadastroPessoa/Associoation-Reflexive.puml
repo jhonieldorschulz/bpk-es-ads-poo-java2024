@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Pessoa {
+  -nome: String
+}
+Pessoa --> Pessoa : amigo
+
+@enduml

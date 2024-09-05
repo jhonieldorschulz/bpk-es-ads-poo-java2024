@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Livro {
+  -titulo: String
+}
+class Autor {
+  -nome: String
+}
+Livro --> Autor
+
+@enduml

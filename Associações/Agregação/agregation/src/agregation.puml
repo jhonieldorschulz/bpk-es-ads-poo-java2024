@@ -1,0 +1,14 @@
+@startuml
+class Pessoa {
+  -nome: String
+  +setCarteira(c: CarteiraDeMotorista): void
+  +getCarteira(): CarteiraDeMotorista
+}
+
+class CarteiraDeMotorista {
+  -numero: String
+  -validade: String
+}
+
+Pessoa "1" o-- "1" CarteiraDeMotorista : "possui"
+@enduml

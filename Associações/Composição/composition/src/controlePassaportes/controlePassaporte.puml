@@ -1,0 +1,16 @@
+@startuml
+class Pessoa {
+  -nome: String
+  -passaporte: Passaporte
+  +Pessoa(nome: String)
+  +emitirPassaporte(numero: String)
+}
+
+class Passaporte {
+  -numero: String
+  +Passaporte(numero: String)
+  +getNumero(): String
+}
+
+Pessoa *-- Passaporte : possui
+@enduml

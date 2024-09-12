@@ -1,0 +1,42 @@
+@startuml
+class Pedido {
+    - int numero
+    - Cliente cliente
+    - List<ItemPedido> itens
+    - Endereco enderecoEntrega
+    + adicionarItem(ItemPedido item)
+    + removerItem(ItemPedido item)
+    + calcularTotal(): double
+}
+
+class ItemPedido {
+    - Produto produto
+    - int quantidade
+    + calcularSubtotal(): double
+}
+
+class Produto {
+    - String nome
+    - double preco
+    + getPreco(): double
+}
+
+class Cliente {
+    - String nome
+    - Endereco endereco
+    + getEndereco(): Endereco
+}
+
+class Endereco {
+    - String rua
+    - String numero
+    - String cidade
+    - String cep
+}
+
+Pedido "1" --> "1..*" ItemPedido
+ItemPedido "1" --> "1" Produto
+Pedido "1" --> "1" Cliente
+Pedido "1" --> "1" Endereco
+Cliente "1" --> "1" Endereco
+@enduml

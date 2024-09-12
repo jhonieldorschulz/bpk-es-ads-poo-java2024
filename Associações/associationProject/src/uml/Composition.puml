@@ -1,0 +1,9 @@
+@startuml
+class Casa {
+}
+
+class Quarto {
+}
+
+Casa *-- Quarto : possui >
+@enduml
